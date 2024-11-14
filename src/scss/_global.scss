@@ -85,10 +85,114 @@ body {
       line-height: 1.5;
     }
   }
+  &__textarea {
+    resize: none;
+    height: 114px;
+    padding: 12px 14px;
+    border-radius: 4px;
+    border: 1px solid #ececec;
+    background-color: vars.$color-white;
+    font-family: "Roboto", serif;
+    color: vars.$color-blue-dark-100;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    &::placeholder {
+      font-family: "Roboto", serif;
+      color: #343434;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
   &__btn {
     width: max-content;
     margin-top: 16px;
     background-color: vars.$color-white;
     color: vars.$color-blue-dark-100;
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+  &__item {
+    position: relative;
+    padding: 30px 120px 30px 40px;
+    border-radius: 16px;
+    border: 1px solid vars.$color-blue-dark-100;
+    cursor: pointer;
+  }
+  &__question {
+    padding: 5px 0;
+    color: #343434;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  &__answer {
+    display: none;
+    position: relative;
+    padding-top: 55px;
+    color: #343434;
+    font-size: 18px;
+    line-height: 1.5;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      right: 0;
+      left: 0;
+      height: 1px;
+      background-color: vars.$color-blue-dark-100;
+    }
+  }
+  &__decor {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: vars.$color-blue-dark-100;
+    transition: filter 0.3s ease;
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+  &__horizontal-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease;
+  }
+  &__vertical-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 16px;
+    border-radius: 2px;
+    background-color: #fff;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease;
+  }
+  &__item--active {
+    .accordion__answer {
+      display: block;
+    }
+    .accordion__vertical-line {
+      transform: rotate(90deg) translate(-8px, 1px);
+    }
+    .accordion__horizontal-line {
+      transform: rotate(360deg) translate(-50%, -1px);
+    }
   }
 }
