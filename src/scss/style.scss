@@ -291,6 +291,83 @@
     line-height: 1.5;
     text-transform: uppercase;
   }
+  &__short-info {
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+  }
+  &__short-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+    padding: 10px 16px;
+    border-radius: 45px;
+    background-color: #eff3f7;
+  }
+  &__short-info-text {
+    color: #343434;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  &__main-info-title {
+    margin-bottom: 16px;
+    color: #003366;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  &__main-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+    margin-bottom: 24px;
+  }
+  &__main-info-item-title {
+    margin-bottom: 8px;
+    color: #343434;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  &__main-info-sublist {
+    display: flex;
+    flex-direction: column;
+    gap: 4px 0;
+  }
+  &__main-info-subitem {
+    position: relative;
+    padding-left: 40px;
+    z-index: 10;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/courses/ckeck.svg");
+    }
+  }
+  &__main-info-subitem-text {
+    color: #343434;
+    line-height: 1.5;
+  }
+  &__main-info-price {
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+    color: vars.$color-blue-dark-100;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  &__main-info-price-devider {
+    width: 2px;
+    height: 45px;
+    background-color: vars.$color-blue-dark-100;
+  }
   &__btn {
     display: block;
     max-width: 216px;
