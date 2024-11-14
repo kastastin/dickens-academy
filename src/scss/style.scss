@@ -17,7 +17,7 @@
     line-height: 1.5;
     transition: filter 0.3s ease;
     &:hover {
-      filter: brightness(1.2); 
+      filter: brightness(1.2);
     }
   }
 }
@@ -70,7 +70,8 @@
     box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
     background-color: #fff;
     overflow: hidden;
-    transition: width 0.3s ease, max-width 0.3s ease, height 0.4s ease-in, max-height 0.4s ease-in;
+    transition: width 0.3s ease, max-width 0.3s ease, height 0.4s ease-in,
+      max-height 0.4s ease-in;
   }
   &__item {
     padding: 10px 20px;
@@ -99,6 +100,211 @@
     }
     &::after {
       transform: rotate(-180deg) translateY(9px);
+    }
+  }
+}
+
+.s-hero {
+  padding: 50px 0;
+  &__inner {
+    display: flex;
+    align-items: stretch;
+    gap: 0 24px;
+  }
+  &__info {
+    padding: 100px 80px;
+    border-radius: 20px;
+    background-color: vars.$color-blue-dark-100;
+  }
+  &__title {
+    font-family: "Poppins", serif;
+    color: vars.$color-white;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  &__title--main {
+    margin: 4px 0 16px;
+  }
+  &__text {
+    margin-bottom: 40px;
+    color: vars.$color-white;
+    line-height: 1.5;
+  }
+  &__btn {
+    display: inline-block;
+    padding: 14px 20px;
+    border-radius: 14px;
+    background-color: vars.$color-white;
+    color: vars.$color-blue-dark-100;
+    font-size: 20px;
+    line-height: 1.5;
+    transition: filter 0.3s ease;
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+  &__img {
+    border-radius: 20px;
+  }
+}
+
+.s-advantages {
+  padding: 70px 0;
+  background-color: vars.$color-blue-50;
+  &__box-title {
+    margin-bottom: 20px;
+    padding: 30px 50px;
+    border-radius: 14px;
+    background-color: vars.$color-white;
+  }
+  &__title {
+    max-width: 990px;
+    font-family: "Poppins", serif;
+    color: vars.$color-blue-dark-100;
+    font-size: 42px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+  }
+  &__item {
+    max-width: 431px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px 0;
+    padding: 30px 50px;
+    border-radius: 14px;
+    background-color: vars.$color-white;
+    text-align: center;
+  }
+  &__item-title {
+    font-family: "Poppins", serif;
+    color: vars.$color-blue-dark-100;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  &__item-text {
+    color: #343434;
+    line-height: 1.5;
+  }
+}
+
+.s-about {
+  padding: 50px 0;
+  &__box-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-family: "Poppins", serif;
+    color: vars.$color-blue-dark-100;
+    font-size: 42px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  &__inner {
+    display: flex;
+    align-items: stretch;
+    gap: 0 27px;
+  }
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 31px 24px;
+  }
+  &__box {
+    padding: 34px;
+    border-radius: 14px;
+    background-color: vars.$color-blue-dark-100;
+  }
+  &__box-title {
+    margin-bottom: 21px;
+    font-family: "Poppins", serif;
+    color: vars.$color-white;
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  &__box-text {
+    color: vars.$color-white;
+    line-height: 1.5;
+  }
+  &__box--stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 34px 75px;
+    text-align: center;
+    .s-about__box-title {
+      margin-bottom: 0;
+      font-size: 42px;
+    }
+    .s-about__box-text {
+      max-width: 166px;
+    }
+  }
+}
+
+.s-courses {
+  padding: 50px 0 120px;
+  &__title {
+    margin-bottom: 20px;
+    font-family: "Poppins", serif;
+    color: vars.$color-blue-dark-100;
+    font-size: 42px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+  }
+}
+
+.course {
+  display: flex;
+  flex-direction: column;
+  gap: 40px 0;
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid vars.$color-blue-dark-100;
+  &__title-box {
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+    margin: 0 auto 0 14px;
+    font-family: "Poppins", serif;
+    color: vars.$color-blue-dark-100;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  &__btn {
+    display: block;
+    max-width: 216px;
+    padding: 14px 28px;
+    border-radius: 14px;
+    background-color: vars.$color-blue-dark-100;
+    color: vars.$color-white;
+    font-size: 20px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-align: center;
+    transition: filter 0.3s ease;
+    &:hover {
+      filter: brightness(1.2);
     }
   }
 }

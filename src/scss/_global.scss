@@ -1,4 +1,7 @@
+@use "vars";
+
 body {
+  background-color: vars.$color-white;
   font-family: "Roboto", serif;
   color: #fff;
   font-size: 18px;
@@ -9,4 +12,31 @@ body {
   max-width: 1360px;
   margin: 0 auto;
   padding: 0 10px;
+}
+
+.details-link {
+  position: relative;
+  padding-left: 50px;
+  color: #343434;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 41px;
+    height: 41px;
+    background-image: url("../images/learn-more.svg");
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+  }
+  &:hover {
+    filter: brightness(1.2);
+  }
 }
