@@ -1,3 +1,10 @@
 $color-white: #fbfbfb;
-$color-blue-50: #e0e7ef;
 $color-blue-dark-100: #003366;
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  line-clamp: $lines;
+}
